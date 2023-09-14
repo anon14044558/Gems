@@ -1,6 +1,6 @@
 import { Controller, Get, Query, Res } from '@nestjs/common';
 import { Response } from 'express';
-import { ImageDownloaderService } from './image-downloader.service';
+import { ImageDownloaderService } from './puppeteer.service';
 
 @Controller('images')
 export class ImageController {

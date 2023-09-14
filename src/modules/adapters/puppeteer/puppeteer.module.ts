@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ImageDownloaderService } from './image-downloader.service';
+import { ImageDownloaderService } from './puppeteer.service';
 import { ImageController } from './image-downloader.controller';
 import { HoneypotModule } from '../honeypot/honeypot.module';
 

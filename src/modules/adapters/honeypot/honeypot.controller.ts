@@ -1,7 +1,7 @@
 import { Controller, Get, Query, Post, Body } from '@nestjs/common'
 import { HoneypotService } from './honeypot.service'
-import { TwitterV2Service } from '../twitter v2/twitterv2.service'
-import { ImageDownloaderService } from '../image-downloader/image-downloader.service'
+import { TwitterV2Service } from '../twitterv2/twitterv2.service'
+import { ImageDownloaderService } from '../puppeteer/puppeteer.service'
 
 @Controller('contract')
 export class HoneypotController {
@@ -160,10 +160,6 @@ export class HoneypotController {
     const mediaId = await this.twitterV2Service.uploadMedia(
       `./downloads/${honeyPotData.Symbol}.png`
     )
-
-    console.log(formattedData1)
-    console.log(formattedData2)
-    console.log(formattedData3)
 
     await this.twitterV2Service.postThreadTweet([
       { text: formattedData1, media: { media_ids: [mediaId] } },
