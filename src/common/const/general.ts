@@ -1,0 +1,7 @@
+export enum TransactionType {
+  SWAPIN = 'SWAP-IN',
+  SWAPOUT = 'SWAP-OUT',
+  TRANSFERIN = 'TRANSFER-IN',
+  TRANSFEROUT = 'TRANSFER-OUT',
+  TOKENSWAP = 'TOKEN-SWAP'
+}
